@@ -1,8 +1,8 @@
 {
   "public": {
     "default": {
-      "commerce-core-endpoint": "https://www.aemshop.net/graphql",
-      "commerce-endpoint": "https://www.aemshop.net/cs-graphql",
+      "commerce-core-endpoint": "https://mcstaging2.jysk.ca/graphql",
+      "commerce-endpoint": "https://mcstaging2.jysk.ca/cs-graphql",
       "headers": {
         "all": {
           "Store": "default"
@@ -18,10 +18,10 @@
       },
       "analytics": {
         "base-currency-code": "USD",
-        "environment": "Production",
+        "environment": "Staging2",
         "store-id": 1,
         "store-name": "Main Website Store",
-        "store-url": "https://www.aemshop.net",
+        "store-url": "https://mcstaging2.jysk.ca",
         "store-view-id": 1,
         "store-view-name": "Default Store View",
         "website-id": 1,
