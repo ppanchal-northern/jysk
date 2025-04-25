@@ -2,7 +2,7 @@
   "public": {
     "default": {
       "commerce-core-endpoint": "https://mcstaging2.jysk.ca/graphql",
-      "commerce-endpoint": "https://mcstaging2.jysk.ca/cs-graphql",
+      "commerce-endpoint": "https://catalog-service-sandbox.adobe.io/cs-graphql",
       "headers": {
         "all": {
           "Store": "default"
