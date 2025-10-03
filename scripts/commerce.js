@@ -339,3 +339,13 @@ export function mapProductAcdl(product) {
     mainImageUrl: product?.images?.[0]?.url,
   };
 }
+function setSelectedStoreCookie(storeId) {
+  const cookieName = 'JYSK_WAREHOUSE::SELECTED_STORE';
+  const expiresDays = 365;
+  const date = new Date();
+  date.setTime(date.getTime() + expiresDays * 24 * 60 * 60 * 1000);
+  const expiresString = `expires=${date.toUTCString()}`;
+
+  document.cookie = `${cookieName}=${storeId}; ${expiresString}; path=/; Secure; SameSite=Lax`;
+}
+setSelectedStoreCookie('287');
