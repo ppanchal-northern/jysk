@@ -1,7 +1,7 @@
 {
   "public": {
     "default": {
-      "commerce-core-endpoint": "https://mcstaging2.jysk.ca/graphql",
+      "commerce-core-endpoint": "https://ipark.global.ssl.fastly.net/graphql",
       "commerce-endpoint": "https://catalog-service-sandbox.adobe.io/graphql",
       "headers": {
         "all": {
@@ -21,7 +21,7 @@
         "environment": "Staging2",
         "store-id": 1,
         "store-name": "Main Website Store",
-        "store-url": "https://mcstaging2.jysk.ca/",
+        "store-url": "https://ipark.global.ssl.fastly.net",
         "store-view-id": 1,
         "store-view-name": "Default Store View",
         "website-id": 1,
