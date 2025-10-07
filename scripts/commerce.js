@@ -349,7 +349,7 @@ function setSelectedStoreCookie(storeId) {
 
   document.cookie = `${cookieName}=${storeId}; ${expiresString}; path=/; Secure; SameSite=Lax`;
 }
-setSelectedStoreCookie('287');
+setSelectedStoreCookie('172');
 export async function changeStore(storeId) {
   await initializeConfig();
   const query = `
