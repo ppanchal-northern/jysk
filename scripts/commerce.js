@@ -371,7 +371,7 @@ export async function changeStore(storeId) {
   }
 }
 (async () => {
-  const response = await changeStore(287);
+  const response = await changeStore(172);
   if (response.success) {
     console.log('Store changed:', response.message);
   } else {
