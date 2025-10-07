@@ -361,14 +361,14 @@ export async function changeStore(storeId) {
 
   const variables = { storeId };
 
-  const data = await performCatalogServiceQuery(query, variables);
+  const data = await performMonolithGraphQLQuery(query, variables, false);
 
-  if (data && data.changeStore) {
-    console.log('Store change response:', data.changeStore);
-    return data.changeStore;
+  if (response?.data?.changeStore?.success) {
+    console.log('Store change response:', response.data.changeStore.message);
   } else {
-    return { success: false, message: 'No response from server' };
+    console.error('Failed:', response?.errors || response?.data?.changeStore?.message);
   }
+  return response?.data?.changeStore;
 }
 (async () => {
   const response = await changeStore(172);
