@@ -361,7 +361,7 @@ export async function changeStore(storeId) {
 
   const variables = { storeId };
 
-  const data = await performMonolithGraphQLQuery(query, variables, false);
+  const response = await performMonolithGraphQLQuery(query, variables, false);
 
   if (response?.data?.changeStore?.success) {
     console.log('Store change response:', response.data.changeStore.message);
