@@ -349,16 +349,3 @@ function setSelectedStoreCookie(storeId) {
   document.cookie = `${cookieName}=${storeId}; ${expiresString}; path=/; Secure; SameSite=Lax`;
 }
 setSelectedStoreCookie('287');
-async function callMagentoAPI(endpoint) {
-    const response = await fetch(`https://ipark.global.ssl.fastly.net/rest/${endpoint}`, {
-        method: 'GET',
-        headers: { 'Content-Type': 'application/json' },
-        credentials: 'include'
-    });
-    if (!response.ok) throw new Error(`Error: ${response.status}`);
-    return response.json();
-}
-callMagentoAPI(`V1/warehouse/changeStore/storeId/287`)
-    .then(data => console.log(data))
-    .catch(err => console.error(err));
-
