@@ -349,3 +349,32 @@ function setSelectedStoreCookie(storeId) {
   document.cookie = `${cookieName}=${storeId}; ${expiresString}; path=/; Secure; SameSite=Lax`;
 }
 setSelectedStoreCookie('287');
+export async function changeStore(storeId) {
+  const query = `
+    query ChangeStore($storeId: Int!) {
+      changeStore(storeId: $storeId) {
+        success
+        message
+      }
+    }
+  `;
+
+  const variables = { storeId };
+
+  const data = await performCatalogServiceQuery(query, variables);
+
+  if (data && data.changeStore) {
+    console.log('Store change response:', data.changeStore);
+    return data.changeStore;
+  } else {
+    return { success: false, message: 'No response from server' };
+  }
+}
+(async () => {
+  const response = await changeStore(287);
+  if (response.success) {
+    console.log('Store changed:', response.message);
+  } else {
+    console.warn('Failed to change store:', response.message);
+  }
+})();
