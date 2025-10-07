@@ -1,6 +1,7 @@
 /* eslint-disable import/prefer-default-export, import/no-cycle */
 import { getMetadata } from './aem.js';
 import {
+  initializeConfig,
   getConfigValue,
   getCookie,
   getHeaders,
@@ -350,6 +351,7 @@ function setSelectedStoreCookie(storeId) {
 }
 setSelectedStoreCookie('287');
 export async function changeStore(storeId) {
+  await initializeConfig();
   const query = `
     query ChangeStore($storeId: Int!) {
       changeStore(storeId: $storeId) {
